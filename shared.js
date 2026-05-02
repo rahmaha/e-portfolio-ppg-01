@@ -5,6 +5,11 @@ function filterMedia(cat, btn) {
   document.querySelectorAll('.media-card').forEach(card => {
     card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
   });
+  // tampilkan/sembunyikan hint link
+  ['siklus1','siklus2','siklus3','lainnya'].forEach(s => {
+    const el = document.getElementById('hint-' + s);
+    if (el) el.style.display = (cat === s) ? 'flex' : 'none';
+  });
 }
 
 // analisis tabs per artefak
@@ -33,8 +38,16 @@ window.addEventListener('scroll', () => {
 });
 
 // hamburger
-const menuToggle = document.getElementById('menu-toggle');
-if (menuToggle) {
-  const navMenu = document.querySelector('.nav-links');
-  menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
-}
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+});
+
+// Tutup hamburger menu saat link diklik
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});

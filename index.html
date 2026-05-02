@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Portfolio — Rahma Hayuning Astuti</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-logo">
+    <span class="path">~/</span>e-portfolio
+  </div>
+<!-- 🔹 HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="#home">home</a></li>
+    <li><a href="#profil">profil</a></li>
+    <li><a href="#artefak">artefak</a></li>
+    <li><a href="#lampiran">lampiran</a></li>
+    <li><a href="#model-guru">model guru</a></li>
+    <li><a href="#dokumentasi">dokumentasi</a></li>
+    <li><a href="#kontak">kontak</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span class="status-full">online • PPG Prajabatan 2026</span>
+    <span class="status-short">online</span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- HOME -->
+<div id="home" style="background: var(--bg); min-height: 100vh; display:flex; align-items:center;">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">ppg-prajabatan · informatika · 2026</div>
+      <h1 class="hero-title">
+        <span class="line1">E-Portfolio</span>
+        <span class="line2">Calon Guru</span>
+        <span class="line3">Profesional.</span>
+      </h1>
+      <p class="hero-desc">
+        Dokumentasi perjalanan belajar, praktik mengajar, dan refleksi profesional selama program PPG Prajabatan — dibangun dengan dedikasi penuh.
+      </p>
+      <div class="hero-btns">
+        <a href="#profil" class="btn-primary">./explore.sh →</a>
+        <a href="#artefak" class="btn-ghost">lihat artefak</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">1</div>
+          <div class="stat-label">semester</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">5+</div>
+          <div class="stat-label">media</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">dokumentasi</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">3</div>
+          <div class="stat-label">siklus</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="t-dot r"></div>
+        <div class="t-dot y"></div>
+        <div class="t-dot g"></div>
+        <div class="t-title">portfolio.json </div>
+      </div>
+      <div class="terminal-body">
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> cat portfolio.json</span></div>
+        <div class="t-line gap"></div>
+
+        <div class="t-line"><span class="t-out">{</span></div>
+
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Rahma Hayuning Astuti"</span>,</span></div>
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"program"</span>: <span class="t-str">"PPG Prajabatan"</span>,</span></div>
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"bidang"</span>: <span class="t-str">"Informatika"</span>,</span></div>
+
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Future Educator & IT Enthusiast"</span>,</span></div>
+        <br>
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">true</span>,</span></div>
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"angkatan"</span>: <span class="t-val">2026</span>,</span></div>
+        <div class="t-line"><span class="t-out">&nbsp;&nbsp;<span class="t-key">"ready"</span>: <span class="t-val">true</span></span></div>
+        <div class="t-line"><span class="t-out">}</span></div>
+        <div class="t-line gap"></div>
+        <div class="t-line"><span class="t-prompt">$</span><span class="t-cmd"> <span class="t-cursor"></span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFIL -->
+<section id="profil" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/profil</span> — tentang saya</div>
+  <div class="sec-label">01 // profil mahasiswa</div>
+  <h2>Siapa Saya</h2>
+  <p class="lead">Calon pendidik bidang informatika dengan ketertarikan pada AI, Machine Learning, dan teknologi pembelajaran inovatif.</p>
+<div class="profil-grid">
+
+  <!-- BARIS ATAS: foto + data diri -->
+  <div class="profil-top">
+    <div>
+      <div class="profil-card">
+        <div class="profil-card-top">
+          <div class="profil-avatar">
+            <img src="assets/foto-profil.png" alt="Foto Profil"
+              onerror="this.style.display='none';this.parentElement.innerHTML='RH'">
+          </div>
+          <div class="profil-name">Rahma Hayuning Astuti</div>
+          <div class="profil-role">// mahasiswa ppg prajabatan 2026</div>
+        </div>
+        <div class="profil-card-body">
+          <div class="profil-row"><span class="profil-row-k">NIM</span><span class="profil-row-v">25105260251</span></div>
+          <div class="profil-row"><span class="profil-row-k">Prodi</span><span class="profil-row-v">Pend. Informatika</span></div>
+          <div class="profil-row"><span class="profil-row-k">LPTK</span><span class="profil-row-v">Universitas Negeri Yogyakarta</span></div>
+          <div class="profil-row"><span class="profil-row-k">Angkatan</span><span class="profil-row-v">2026</span></div>
+          <div class="profil-row"><span class="profil-row-k">Sekolah Mitra</span><span class="profil-row-v">SMK N 2 Depok Sleman</span></div>
+          <div class="profil-row"><span class="profil-row-k">DPL</span><span class="profil-row-v">Dr. Ir. Drs. Masduki Zakariah, M.T</span></div>
+          <div class="profil-row"><span class="profil-row-k">Guru Pamong</span><span class="profil-row-v">Rusli Abdul Hamid, S.Pd</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- narasi asal daerah tetap di kanan foto, biar tidak terlalu sepi -->
+    <div class="narasi-section">
+      <div class="narasi-label">// asal &amp; keunikan daerah</div>
+      <p>Saya, Rahma Hayuning Astuti, lahir dan besar di <strong style="color:var(--text);">Demak, Jawa Tengah</strong> — kota yang dikenal sebagai salah satu pusat penyebaran Islam di Nusantara, dengan Masjid Agung Demak yang telah berdiri sejak abad ke-15 sebagai ikonnya. Tumbuh di lingkungan yang kental dengan nilai kebersamaan dan gotong royong mengajarkan saya bahwa belajar bukan proses yang soliter — melainkan sesuatu yang tumbuh subur ketika dilakukan bersama.</p>
+      <p style="margin-top:0.8rem;">Setelah menyelesaikan pendidikan S1 Teknik Informatika di <strong style="color:var(--text);">Universitas Dian Nuswantoro, Semarang</strong> pada tahun 2023, saya melanjutkan perjalanan ke Yogyakarta untuk menempuh Program PPG Prajabatan di Universitas Negeri Yogyakarta — membawa semangat dari kota wali untuk menjadi pendidik yang tidak hanya mengajarkan teknologi, tetapi juga nilai-nilai yang melampaui kode dan algoritma.</p>
+    </div>
+  </div>
+
+  <!-- BARIS BAWAH: inspirasi full width -->
+  <div class="profil-bottom">
+    <div class="narasi-section">
+      <div class="narasi-label">// inspirasi &amp; tujuan menjadi guru</div>
+
+      <div class="researcher-row">
+        <a class="researcher-card" href="https://karpathy.ai" target="_blank">
+          <div class="researcher-card-img">
+            <img src="https://karpathy.ai/assets/me_new.jpg"
+              alt="Andrej Karpathy"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="rc-initial" style="display:none;">AK</div>
+          </div>
+          <div class="researcher-card-body">
+            <div class="rc-name">Andrej Karpathy</div>
+            <div class="rc-role">ex-Tesla AI · ex-OpenAI · educator</div>
+            <div class="rc-quote">"The best teachers are the ones who make you feel like you can do it too."</div>
+          </div>
+        </a>
+
+        <a class="researcher-card" href="https://www.andrewng.org" target="_blank">
+          <div class="researcher-card-img">
+            <img src="https://www.andrewng.org/_next/image?url=%2Fimages%2Fandrew-ng-about-page.jpg&w=750&q=75&dpl=dpl_GrjjEjBVeDwiYUWkFBH9Ky4cc27Z"
+              alt="Andrew Ng"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="rc-initial" style="display:none;">AN</div>
+          </div>
+          <div class="researcher-card-body">
+            <div class="rc-name">Andrew Ng</div>
+            <div class="rc-role">Founder · Coursera &amp; DeepLearning.AI</div>
+            <div class="rc-quote">"AI is the new electricity. Just as electricity transformed industries, AI will transform every major industry."</div>
+          </div>
+        </a>
+
+        <a class="researcher-card" href="https://profiles.stanford.edu/fei-fei-li" target="_blank">
+          <div class="researcher-card-img">
+            <img src="https://profiles.stanford.edu/proxy/api/cap/profiles/15052/resources/profilephoto/350x350.1550534393295.jpg"
+              alt="Fei-Fei Li"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="rc-initial" style="display:none;">FL</div>
+          </div>
+          <div class="researcher-card-body">
+            <div class="rc-name">Fei-Fei Li</div>
+            <div class="rc-role">Stanford HAI · ImageNet pioneer</div>
+            <div class="rc-quote">"There's nothing artificial about AI's potential to uplift human beings and serve as a universal empowerment tool."</div>
+          </div>
+        </a>
+      </div>
+
+      <p>Perjalanan saya menuju dunia pendidikan tidak dimulai dari cita-cita menjadi guru — melainkan dari kecintaan pada AI dan Machine Learning. Saya mengenal karya Andrej Karpathy, Andrew Ng, dan Fei-Fei Li bukan hanya karena kontribusi riset mereka, tetapi karena satu kesamaan yang saya kagumi: <strong style="color:var(--text);">kemampuan menjelaskan hal yang sangat kompleks dengan cara yang bisa dipahami siapa pun.</strong></p>
+      <p style="margin-top:0.8rem;">Karpathy menjelaskan neural network dari nol lewat YouTube dan ditonton jutaan orang. Andrew Ng membangun Coursera karena percaya pendidikan AI harus bisa diakses semua orang. Fei-Fei Li terus berbicara tentang AI yang berpusat pada manusia. Dari mereka saya belajar bahwa <em style="color:var(--amber);">menjadi ahli belum cukup — yang lebih penting adalah bagaimana kamu membawa pengetahuan itu ke orang lain.</em> Itulah yang ingin saya wujudkan sebagai guru informatika.</p>
+    </div>
+
+    <!-- Kutipan personal -->
+    <div class="kutipan-personal">
+      <div class="kutipan-personal-mark">"</div>
+      <div class="kutipan-personal-text">Saya tidak memilih jalan ini karena sudah merencanakan semuanya — tetapi justru di sinilah saya menemukan bahwa mengajar dan belajar adalah dua sisi dari hal yang sama. Jika para peneliti yang saya kagumi menghabiskan hidup mereka membuat ilmu yang rumit menjadi mudah dipahami, maka saya ingin melakukan hal yang sama di dalam kelas.</div>
+      <div class="kutipan-personal-src">— Rahma Hayuning Astuti, calon guru informatika</div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ARTEFAK -->
+<section id="artefak" class="reveal" style="background:var(--bg2);max-width:100%;padding:6rem 2rem;">
+  <div style="max-width:1080px;margin:0 auto;">
+    <div class="prompt"><span class="prompt-path">~/artefak</span> — rencana &amp; perangkat pembelajaran</div>
+    <div class="sec-label">02 // artefak produk</div>
+    <h2>Artefak Pembelajaran</h2>
+    <p class="lead">modul ajar, media, LKPD, hasil kerja siswa, dan bahan ajar — klik <strong style="color:var(--amber);">lihat analisis</strong> untuk melihat analisis mendalam dan refleksi per siklus.</p>
+
+    <div class="media-filter">
+      <button class="filter-btn active" onclick="filterMedia('all',this)">semua</button>
+      <button class="filter-btn" onclick="filterMedia('siklus1',this)">siklus 1</button>
+      <button class="filter-btn" onclick="filterMedia('siklus2',this)">siklus 2</button>
+      <button class="filter-btn" onclick="filterMedia('siklus3',this)">siklus 3</button>
+      <button class="filter-btn" onclick="filterMedia('lainnya',this)">lainnya</button>
+    </div>
+
+    <!-- hint link muncul/sembunyi sesuai tab aktif -->
+    <div class="siklus-hint" id="hint-siklus1" style="display:none;">
+      <span>📄 lihat analisis lengkap siklus 1</span>
+      <a href="siklus1.html">buka halaman siklus 1 →</a>
+    </div>
+    <div class="siklus-hint" id="hint-siklus2" style="display:none;">
+      <span>📄 lihat analisis lengkap siklus 2</span>
+      <a href="siklus2.html">buka halaman siklus 2 →</a>
+    </div>
+    <div class="siklus-hint" id="hint-siklus3" style="display:none;">
+      <span>📄 lihat analisis lengkap siklus 3</span>
+      <a href="siklus3.html">buka halaman siklus 3 →</a>
+    </div>
+    <div class="siklus-hint" id="hint-lainnya" style="display:none;">
+      <span>📚 lihat artefak penunjang lainnya</span>
+      <a href="lainnya.html">buka halaman lainnya →</a>
+    </div>
+
+    <div class="media-grid" id="mediaGrid">
+
+      <!-- SIKLUS 1 -->
+      <div class="media-card" data-cat="siklus1">
+        <div class="media-thumb"><div class="media-thumb-icon">📄</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge">Siklus 1</span></div>
+        <div class="media-info">
+          <div class="media-cat">modul ajar / rpp</div>
+          <div class="media-title">Modul Ajar — [Siklus 1]</div>
+          <a class="media-detail-btn" href="siklus1.html#modul">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus1">
+        <div class="media-thumb"><div class="media-thumb-icon">📊</div><span class="media-type-badge badge-ppt">PPT</span><span class="media-siklus-badge">Siklus 1</span></div>
+        <div class="media-info">
+          <div class="media-cat">media pembelajaran</div>
+          <div class="media-title">Slide / Media — [Siklus 1]</div>
+          <a class="media-detail-btn" href="siklus1.html#media">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus1">
+        <div class="media-thumb"><div class="media-thumb-icon">📝</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge">Siklus 1</span></div>
+        <div class="media-info">
+          <div class="media-cat">lkpd</div>
+          <div class="media-title">LKPD — [Siklus 1]</div>
+          <a class="media-detail-btn" href="siklus1.html#lkpd">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus1">
+        <div class="media-thumb"><div class="media-thumb-icon">✅</div><span class="media-type-badge badge-link">XLSX</span><span class="media-siklus-badge">Siklus 1</span></div>
+        <div class="media-info">
+          <div class="media-cat">hasil kerja siswa</div>
+          <div class="media-title">Hasil Kerja Siswa — Siklus 1</div>
+          <a class="media-detail-btn" href="siklus1.html#hasil">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+
+      <!-- SIKLUS 2 -->
+      <!-- Pertemuan 1-->
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📄</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">modul ajar / rpp</div>
+          <div class="media-title">Modul Ajar — [Siklus 2 . Pertemuan 1]</div>
+          <a class="media-detail-btn" href="siklus2.html#modul">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📊</div><span class="media-type-badge badge-ppt">PPT</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">media pembelajaran</div>
+          <div class="media-title">Slide / Media — [Siklus 2 . Pertemuan 1]</div>
+          <a class="media-detail-btn" href="siklus2.html#media">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📝</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">lkpd</div>
+          <div class="media-title">LKPD — [Siklus 2 . Pertemuan 1]</div>
+          <a class="media-detail-btn" href="siklus2.html#lkpd">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">✅</div><span class="media-type-badge badge-link">XLSX</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">hasil kerja siswa</div>
+          <div class="media-title">Hasil Kerja Siswa — [Siklus 2 . Pertemuan 1]</div>
+          <a class="media-detail-btn" href="siklus2.html#hasil">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+
+      <!-- Pertemuan 2-->
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📄</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">modul ajar / rpp</div>
+          <div class="media-title">Modul Ajar — [Siklus 2 . Pertemuan 2]</div>
+          <a class="media-detail-btn" href="siklus2.html#modul">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📊</div><span class="media-type-badge badge-ppt">PPT</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">media pembelajaran</div>
+          <div class="media-title">Slide / Media — [Siklus 2 . Pertemuan 2]</div>
+          <a class="media-detail-btn" href="siklus2.html#media">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">📝</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">lkpd</div>
+          <div class="media-title">LKPD — [Siklus 2 . Pertemuan 2]</div>
+          <a class="media-detail-btn" href="siklus2.html#lkpd">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus2">
+        <div class="media-thumb"><div class="media-thumb-icon">✅</div><span class="media-type-badge badge-link">XLSX</span><span class="media-siklus-badge s2">Siklus 2</span></div>
+        <div class="media-info">
+          <div class="media-cat">hasil kerja siswa</div>
+          <div class="media-title">Hasil Kerja Siswa — [Siklus 2 . Pertemuan 2]</div>
+          <a class="media-detail-btn" href="siklus2.html#hasil">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+
+      <!-- SIKLUS 3 -->
+      <div class="media-card" data-cat="siklus3">
+        <div class="media-thumb"><div class="media-thumb-icon">📄</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s3">Siklus 3</span></div>
+        <div class="media-info">
+          <div class="media-cat">modul ajar / rpp</div>
+          <div class="media-title">Modul Ajar — [Siklus 3]</div>
+          <a class="media-detail-btn" href="siklus3.html#modul">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus3">
+        <div class="media-thumb"><div class="media-thumb-icon">📊</div><span class="media-type-badge badge-ppt">PPT</span><span class="media-siklus-badge s3">Siklus 3</span></div>
+        <div class="media-info">
+          <div class="media-cat">media pembelajaran</div>
+          <div class="media-title">Slide / Media — [Siklus 3]</div>
+          <a class="media-detail-btn" href="siklus3.html#media">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus3">
+        <div class="media-thumb"><div class="media-thumb-icon">📝</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge s3">Siklus 3</span></div>
+        <div class="media-info">
+          <div class="media-cat">lkpd</div>
+          <div class="media-title">LKPD — [Siklus 3]</div>
+          <a class="media-detail-btn" href="siklus3.html#lkpd">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+      <div class="media-card" data-cat="siklus3">
+        <div class="media-thumb"><div class="media-thumb-icon">✅</div><span class="media-type-badge badge-link">XLSX</span><span class="media-siklus-badge s3">Siklus 3</span></div>
+        <div class="media-info">
+          <div class="media-cat">hasil kerja siswa</div>
+          <div class="media-title">Hasil Kerja Siswa — Siklus 3</div>
+          <a class="media-detail-btn" href="siklus3.html#hasil">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+
+      <!--LAINNYA -->
+      <div class="media-card" data-cat="lainnya">
+        <div class="media-thumb"><div class="media-thumb-icon">📄</div><span class="media-type-badge badge-pdf">PDF</span><span class="media-siklus-badge lainnya">lainnya</span></div>
+        <div class="media-info">
+          <div class="media-cat">bahan ajar</div>
+          <div class="media-title">Bahan Ajar</div>
+          <a class="media-detail-btn" href="lainnya.html">lihat analisis →</a>
+          <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAMPIRAN -->
+<section id="lampiran" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/lampiran</span> — penilaian gp &amp; dpl</div>
+  <div class="sec-label">03 // lampiran 7 &amp; 8</div>
+  <h2>Penilaian dari Guru Pamong &amp; DPL</h2>
+  <p class="lead">Lampiran 7 (Penilaian Penyusunan Perangkat) dan Lampiran 8 (Penilaian Praktik Mengajar) — 3 siklus PPL Terbimbing.</p>
+  <div class="lampiran-grid">
+    <div class="lampiran-block">
+      <div class="lampiran-header">
+        <div class="lampiran-num">Lampiran 7</div>
+        <div class="lampiran-title">Instrumen Penilaian Penyusunan Perangkat Pembelajaran</div>
+        <div class="lampiran-desc">Penilaian GP terhadap Modul Ajar, LKPD, Media, dan Instrumen Penilaian yang disusun mahasiswa per siklus.</div>
+      </div>
+      <div class="lampiran-siklus-row">
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 1</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP: [Isi catatan dari Rusli Abdul Hamid, S.Pd untuk siklus 1 — hal yang sudah baik dan yang perlu diperbaiki]</div>
+          <a class="media-link" href="GANTI_LINK_L7S1" target="_blank">↗ lihat dokumen</a>
+        </div>
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 2</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP: [Catatan siklus 2]</div>
+          <a class="media-link" href="GANTI_LINK_L7S2" target="_blank">↗ lihat dokumen</a>
+        </div>
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 3</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP: [Catatan siklus 3]</div>
+          <a class="media-link" href="GANTI_LINK_L7S3" target="_blank">↗ lihat dokumen</a>
+        </div>
+      </div>
+    </div>
+    <div class="lampiran-block">
+      <div class="lampiran-header">
+        <div class="lampiran-num">Lampiran 8</div>
+        <div class="lampiran-title">Instrumen Penilaian Praktik Mengajar Mahasiswa</div>
+        <div class="lampiran-desc">Penilaian GP dan DPL terhadap praktik mengajar mahasiswa selama PPL Terbimbing 3 siklus.</div>
+      </div>
+      <div class="lampiran-siklus-row">
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 1</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP &amp; DPL: [Evaluasi praktik siklus 1 — pengelolaan kelas, penyampaian materi, interaksi siswa]</div>
+          <a class="media-link" href="GANTI_LINK_L8S1" target="_blank">↗ lihat dokumen</a>
+        </div>
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 2</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP &amp; DPL: [Catatan siklus 2]</div>
+          <a class="media-link" href="GANTI_LINK_L8S2" target="_blank">↗ lihat dokumen</a>
+        </div>
+        <div class="lampiran-siklus-card">
+          <div class="ls-label">Siklus 3</div>
+          <div class="ls-score">[Nilai]</div>
+          <div class="ls-catatan">Catatan GP &amp; DPL: [Catatan siklus 3]</div>
+          <a class="media-link" href="GANTI_LINK_L8S3" target="_blank">↗ lihat dokumen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODEL GURU -->
+<section id="model-guru" class="reveal" style="background:var(--bg2);max-width:100%;padding:6rem 2rem;">
+  <div style="max-width:1080px;margin:0 auto;">
+    <div class="prompt"><span class="prompt-path">~/model-guru</span> — guru yang ingin saya jadi</div>
+    <div class="sec-label">04 // model guru yang dituju</div>
+    <h2>Misi &amp; Model Guru Profesional</h2>
+    <p class="lead">Rancangan misi, kompetensi, dan karakter yang ingin dibangun menuju guru informatika profesional.</p>
+    <div class="misi-block">
+      <div class="misi-label">// pernyataan misi</div>
+      <div class="misi-text">"Misi saya adalah menjadi guru informatika yang memberdayakan peserta didik untuk berpikir komputasional, memanfaatkan teknologi secara etis, dan siap menghadapi dunia yang berbasis AI."</div>
+    </div>
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="model-icon">🧠</div>
+        <div class="model-title">Kompetensi yang Ingin Dibangun</div>
+        <ul class="model-list">
+          <li>Merancang pembelajaran berbasis project dan problem-solving</li>
+          <li>Mengintegrasikan AI/ML sebagai alat bantu pembelajaran</li>
+          <li>Melakukan asesmen autentik dan berdiferensiasi</li>
+          <li>Menguasai computational thinking secara mendalam</li>
+        </ul>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">🌱</div>
+        <div class="model-title">Karakter Guru yang Ingin Diwujudkan</div>
+        <ul class="model-list">
+          <li>Reflektif — terus mengevaluasi dan memperbaiki praktik mengajar</li>
+          <li>Adaptif — responsif terhadap kebutuhan peserta didik</li>
+          <li>Inspiratif — memotivasi siswa berani bermimpi besar</li>
+          <li>Kolaboratif — terbuka belajar bersama rekan dan siswa</li>
+        </ul>
+      </div>
+      <div class="model-card">
+        <div class="model-icon">🎯</div>
+        <div class="model-title">Indikator Keberhasilan</div>
+        <ul class="model-list">
+          <li>Peserta didik aktif dan antusias dalam belajar</li>
+          <li>Capaian pembelajaran meningkat tiap siklus</li>
+          <li>Umpan balik positif dari GP, DPL, dan siswa</li>
+          <li>Portofolio pembelajaran berkembang konsisten</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOKUMENTASI -->
+<section id="dokumentasi" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/dokumentasi</span> — jejak kegiatan ppl</div>
+  <div class="sec-label">05 // log aktivitas</div>
+  <h2>Dokumentasi Kegiatan PPL</h2>
+  <p class="lead">Rekam jejak PPL di SMK N 2 Depok Sleman.</p>
+  <div class="timeline">
+
+  <div class="tl-item">
+    <div class="tl-date"><strong>Februari</strong>Awal Program</div>
+    <div class="tl-content">
+      <div class="tl-title">Orientasi &amp; Pembekalan PPG</div>
+      <div class="tl-desc">Pengenalan program PPG Prajabatan, kurikulum merdeka, pengarahan sekolah mitra SMK N 2 Depok Sleman, dan pembentukan kelompok belajar mahasiswa.</div>
+      <div class="tl-photos">
+        <a class="tl-photo" target="_blank">
+          <img src="assets/orientasi-1.jpeg" alt="Orientasi"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto orientasi</div>'">
+        </a>
+         <a class="tl-photo" target="_blank">
+          <img src="assets/orientasi-2.jpeg" alt="Orientasi"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto orientasi</div>'">
+        </a>
+      </div>
+      <div class="tl-tags">
+        <span class="tl-tag tl-foto">📷 foto</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-date"><strong>Feb - April</strong>Bimbingan</div>
+    <div class="tl-content">
+      <div class="tl-title">Bimbingan DPL &amp; Guru Pamong</div>
+      <div class="tl-desc">Sesi bimbingan bersama Dr. Ir. Drs. Masduki Zakariah, M.T dan Rusli Abdul Hamid, S.Pd — revisi perangkat ajar, evaluasi praktik, dan diskusi pengembangan pembelajaran.</div>
+      <div class="tl-photos">
+        <a class="tl-photo" target="_blank">
+          <img src="assets/bimbingan pak rusli.jpeg" alt="Bimbingan"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto bimbingan</div>'">
+        </a>
+        <a class="tl-photo" target="_blank">
+          <img src="assets/bimbingan pak rusli.jpeg" alt="Bimbingan"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto bimbingan</div>'">
+        </a>
+      </div>
+      <div class="tl-tags">
+        <span class="tl-tag tl-foto">📷 foto</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-date"><strong>April</strong>PPL</div>
+    <div class="tl-content">
+      <div class="tl-title">Praktik Mengajar — 3 Siklus</div>
+      <div class="tl-desc">Pelaksanaan PPL Terbimbing di SMK N 2 Depok Sleman selama 3 siklus. Setiap siklus mencakup perencanaan, pelaksanaan, observasi, dan refleksi bersama GP dan DPL.</div>
+      <div class="tl-photos">
+        <a class="tl-photo" target="_blank">
+          <img src="https://drive.google.com/thumbnail?id=FOTO_ID_S1&sz=w400" alt="Siklus 1"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>siklus 1</div>'">
+        </a>
+        <a class="tl-photo" href="https://drive.google.com/file/d/FOTO_ID_S2/view" target="_blank">
+          <img src="https://drive.google.com/thumbnail?id=FOTO_ID_S2&sz=w400" alt="Siklus 2"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>siklus 2</div>'">
+        </a>
+        <a class="tl-photo" href="https://drive.google.com/file/d/FOTO_ID_S3/view" target="_blank">
+          <img src="https://drive.google.com/thumbnail?id=FOTO_ID_S3&sz=w400" alt="Siklus 3"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>siklus 3</div>'">
+        </a>
+      </div>
+      <div class="tl-tags">
+        <span class="tl-tag tl-foto">📷 foto</span>
+        <span class="tl-tag tl-video">🎬 video</span>
+        <a href="siklus1.html" style="font-size:0.68rem;color:var(--amber);text-decoration:none;margin-left:4px;">↗ siklus 1</a>
+        <a href="siklus2.html" style="font-size:0.68rem;color:var(--amber);text-decoration:none;margin-left:4px;">↗ siklus 2</a>
+        <a href="siklus3.html" style="font-size:0.68rem;color:var(--amber);text-decoration:none;margin-left:4px;">↗ siklus 3</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tl-item">
+    <div class="tl-date"><strong>April</strong>Penutup</div>
+    <div class="tl-content">
+      <div class="tl-title">Pamit di SMK N 2 Depok</div>
+      <div class="tl-desc">Momen pamit bersama guru-guru SMK N 2 Depok Sleman yang selama ini menerima dan membimbing kami dengan hangat. Bukan acara formal, tapi justru momen ini yang paling berkesan dari seluruh perjalanan PPL.</div>
+      <div class="tl-photos">
+        <a class="tl-photo" target="_blank">
+          <img src="assets/penutup-1.jpeg" alt="Pamit"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto perpisahan</div>'">
+        </a>
+        <a class="tl-photo" target="_blank">
+          <img src="assets/penutup-2.jpeg" alt="Pamit"
+            onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto perpisahan</div>'">
+        </a>
+      </div>
+      <div class="tl-tags">
+        <span class="tl-tag tl-foto">📷 foto</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="reveal" style="background: var(--bg2); max-width:100%; padding: 6rem 2rem;">
+  <div style="max-width: 1080px; margin: 0 auto;">
+    <div class="prompt"><span class="prompt-path">~/kontak</span> — let's connect</div>
+    <div class="sec-label">07 // kontak</div>
+    <h2>Hubungi Saya</h2>
+    <p class="lead">Tertarik untuk berdiskusi, kolaborasi, atau sekadar bertukar ide? Silakan hubungi saya melalui kontak berikut.</p>
+    <!-- 🔹 Tombol Sosial -->
+     <div class="contact-wrapper">
+
+      <!-- KIRI: tombol kontak -->
+      <div class="contact-left">
+        <div class="contact-buttons">
+          <a href="https://www.linkedin.com/in/rahma-hayuning-astuti-a1023b1aa/" target="_blank" class="btn-contact">LinkedIn</a>
+          <a href="https://github.com/rahmaha" target="_blank" class="btn-contact">GitHub</a>
+          <a href="mailto:rahmahayuningastuti@gmail.com" class="btn-contact">Email</a>
+        </div>
+      </div>
+
+      <!-- KANAN: grid 4 foto -->
+      <div class="contact-right">
+        <div class="contact-photo-grid">
+
+          <!-- foto 1: Tentang Saya -->
+          <a class="contact-photo" target="_blank">
+            <img src="assets/fotoku-2.jpeg"
+              alt="Tentang Saya"
+              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>👥</span>Tentang Saya</div>'">
+            <div class="contact-photo-label">Tentang Saya</div>
+          </a>
+
+          <!-- foto 2: tim PPL dengan Guru Pamong -->
+          <a class="contact-photo" href="LINK_FOTO_GP" target="_blank">
+            <img src="https://drive.google.com/thumbnail?id=FOTO_ID_GP&sz=w400"
+              alt="Bersama Guru Pamong"
+              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>🤝</span>guru pamong</div>'">
+            <div class="contact-photo-label">bersama guru pamong</div>
+          </a>
+
+          <!-- foto 3 -->
+          <a class="contact-photo" href="" target="_blank">
+            <img src=""
+              alt="GitHub Project"
+              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>🐱</span>github</div>'">
+            <div class="contact-photo-label">github project</div>
+          </a>
+
+          <!-- foto 4: screenshot project -->
+          <a class="contact-photo" href="LINK_PROJECT_REPO" target="_blank">
+            <img src="GANTI_PATH_SCREENSHOT_PROJECT"
+              alt="publikasi"
+              onerror="this.parentElement.innerHTML='<div class=\'contact-photo-placeholder\'><span>💻</span>publikasi</div>'">
+            <div class="contact-photo-label">publikasi</div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">e-portfolio · ppg prajabatan 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
+  <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
+</footer>
+
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
