@@ -1,18 +1,21 @@
-// filter media/artefak by category
+// ===============================
+// FILTER MEDIA / ARTEFAK
+// ===============================
 function filterMedia(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   document.querySelectorAll('.media-card').forEach(card => {
     card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
   });
-  // tampilkan/sembunyikan hint link
   ['siklus1','siklus2','siklus3','lainnya'].forEach(s => {
     const el = document.getElementById('hint-' + s);
     if (el) el.style.display = (cat === s) ? 'flex' : 'none';
   });
 }
 
-// analisis tabs per artefak
+// ===============================
+// ANALISIS TABS
+// ===============================
 function switchTab(artefakId, tabName) {
   document.querySelectorAll(`#${artefakId} .atab`).forEach(t => t.classList.remove('active'));
   document.querySelectorAll(`#${artefakId} .analisis-panel`).forEach(p => p.classList.remove('active'));
@@ -20,34 +23,153 @@ function switchTab(artefakId, tabName) {
   document.querySelector(`#${artefakId} .panel-${tabName}`).classList.add('active');
 }
 
-// scroll reveal
+// ===============================
+// MODAL
+// ===============================
+function openModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.add('open');
+    document.body.classList.add('modal-open');
+  }
+}
+function closeModal(id) {
+  const modal = document.getElementById(id);
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+}
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('modal-overlay')) closeModal(e.target.id);
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.modal-overlay.open').forEach(m => closeModal(m.id));
+  }
+});
+
+// ===============================
+// SCROLL REVEAL
+// ===============================
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// nav active highlight
-const sections = document.querySelectorAll('section[id], div[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) current = s.id; });
-  navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current || a.getAttribute('href') === window.location.pathname.split('/').pop() + '#' + current);
+// ===============================
+// HAMBURGER
+// ===============================
+const menuToggle = document.getElementById('menu-toggle');
+const navMenu = document.querySelector('.nav-links');
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('active');
   });
-});
+}
 
-// hamburger
-const menuToggle = document.getElementById("menu-toggle");
-const navMenu = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-// Tutup hamburger menu saat link diklik
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
+    if (navMenu) navMenu.classList.remove('active');
   });
 });
+
+document.addEventListener('click', (e) => {
+  if (navMenu && !e.target.closest('nav')) {
+    navMenu.classList.remove('active');
+  }
+});
+
+// ===============================
+// DROPDOWN — hover desktop, klik mobile
+// ===============================
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      // hanya toggle di mobile, desktop pakai hover CSS
+      if (window.innerWidth <= 840) {
+        document.querySelectorAll('.nav-dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('mobile-open');
+        });
+        dropdown.classList.toggle('mobile-open');
+      }
+    });
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.nav-dropdown')) {
+    document.querySelectorAll('.nav-dropdown').forEach(d => {
+      d.classList.remove('mobile-open');
+    });
+  }
+});
+
+// ===============================
+// NAV ACTIVE + DROPDOWN LABEL
+// ===============================
+const isIndexPage = window.location.pathname.endsWith('index.html')
+                 || window.location.pathname === '/'
+                 || window.location.pathname.endsWith('/');
+
+const dropdownSections = isIndexPage ? {
+  'artefak':    { dropdownId: 'nav-dropdown-portfolio', label: 'artefak ▾' },
+  'lampiran':   { dropdownId: 'nav-dropdown-portfolio', label: 'lampiran ▾' },
+  'model-guru': { dropdownId: 'nav-dropdown-portfolio', label: 'model guru ▾' },
+} : {};
+
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  const scrollY = window.scrollY;
+
+  sections.forEach(s => {
+    const sectionTop = s.offsetTop - 80;
+    const sectionBottom = sectionTop + s.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionBottom) current = s.id;
+  });
+
+  if (!current) {
+    let minDist = Infinity;
+    sections.forEach(s => {
+      const dist = Math.abs(s.offsetTop - scrollY - 80);
+      if (dist < minDist) { minDist = dist; current = s.id; }
+    });
+  }
+
+  // reset semua
+  navLinks.forEach(a => a.classList.remove('active'));
+  document.querySelectorAll('.nav-dropdown-toggle').forEach(t => {
+    t.classList.remove('active');
+    if (t.closest('#nav-dropdown-portfolio')) t.textContent = 'portfolio ▾';
+    if (t.closest('#nav-dropdown-siklus')) t.textContent = 'siklus ▾';
+  });
+
+  if (dropdownSections[current]) {
+    const { dropdownId, label } = dropdownSections[current];
+    const dd = document.getElementById(dropdownId);
+    if (dd) {
+      const toggle = dd.querySelector('.nav-dropdown-toggle');
+      if (toggle) {
+        toggle.classList.add('active');
+        toggle.textContent = label;
+      }
+    }
+  }
+
+  navLinks.forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '#' + current || href?.endsWith('#' + current)) {
+      a.classList.add('active');
+    }
+  });
+});
+
+window.dispatchEvent(new Event('scroll'));

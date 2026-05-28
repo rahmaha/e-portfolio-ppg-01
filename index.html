@@ -19,10 +19,19 @@
   <ul class="nav-links">
     <li><a href="#home">home</a></li>
     <li><a href="#profil">profil</a></li>
-    <li><a href="#artefak">artefak</a></li>
-    <li><a href="#lampiran">lampiran</a></li>
-    <li><a href="#model-guru">model guru</a></li>
+
+    <!-- dropdown: artefak + lampiran + model guru -->
+    <li class="nav-dropdown" id="nav-dropdown-portfolio">
+      <span class="nav-dropdown-toggle">portfolio ▾</span>
+      <div class="nav-dropdown-menu">
+        <a href="#artefak"><span class="dd-num">01</span> Artefak</a>
+        <a href="#lampiran"><span class="dd-num">02</span> Lampiran</a>
+        <a href="#model-guru"><span class="dd-num">03</span> Model Guru</a>
+      </div>
+    </li>
+
     <li><a href="#dokumentasi">dokumentasi</a></li>
+    <li><a href="refleksi.html">refleksi</a></li>
     <li><a href="#kontak">kontak</a></li>
   </ul>
   <div class="nav-status">
@@ -206,9 +215,8 @@
 </section>
 
 <!-- ARTEFAK -->
-<section id="artefak" class="reveal" style="background:var(--bg2);max-width:100%;padding:6rem 2rem;">
-  <div style="max-width:1080px;margin:0 auto;">
-    <div class="prompt"><span class="prompt-path">~/artefak</span> — rencana &amp; perangkat pembelajaran</div>
+<section id="artefak" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/artefak</span> — rencana &amp; perangkat pembelajaran</div>
     <div class="sec-label">02 // artefak produk</div>
     <h2>Artefak Pembelajaran</h2>
     <p class="lead">modul ajar, media, LKPD, hasil kerja siswa, dan bahan ajar — klik <strong style="color:var(--amber);">lihat analisis</strong> untuk melihat analisis mendalam dan refleksi per siklus.</p>
@@ -404,7 +412,6 @@
           <a class="media-link" href="GANTI_LINK_GDRIVE" target="_blank">↗ Drive</a>
         </div>
       </div>
-    </div>
   </div>
 </section>
 
@@ -473,7 +480,7 @@
 </section>
 
 <!-- MODEL GURU -->
-<section id="model-guru" class="reveal" style="background:var(--bg2);max-width:100%;padding:6rem 2rem;">
+<section id="model-guru" class="reveal">
   <div style="max-width:1080px;margin:0 auto;">
     <div class="prompt"><span class="prompt-path">~/model-guru</span> — guru yang ingin saya jadi</div>
     <div class="sec-label">04 // model guru yang dituju</div>
@@ -558,7 +565,7 @@
             onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto bimbingan</div>'">
         </a>
         <a class="tl-photo" target="_blank">
-          <img src="assets/bimbingan pak rusli.jpeg" alt="Bimbingan"
+          <img src="assets/sama-pak-masduki.jpeg" alt="Bimbingan"
             onerror="this.parentElement.innerHTML='<div class=\'tl-photo-placeholder\'><span>📷</span>foto bimbingan</div>'">
         </a>
       </div>

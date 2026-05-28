@@ -13,23 +13,28 @@
   <div class="nav-logo">
     <span class="path">~/</span>e-portfolio
   </div>
-
+<!-- 🔹 HAMBURGER -->
   <div class="menu-toggle" id="menu-toggle">☰</div>
+
   <ul class="nav-links">
     <li><a href="index.html">← home</a></li>
     <li><a href="index.html#profil">profil</a></li>
     <li><a href="index.html#lampiran">lampiran</a></li>
-    <li><a href="index.html#model-guru">model guru</a></li>
-    <li><a href="siklus1.html" class="active">siklus 1</a></li>
-    <li><a href="siklus2.html">siklus 2</a></li>
-    <li><a href="siklus3.html">siklus 3</a></li>
+
+    <!-- DROPDOWN SIKLUS -->
+    <li class="nav-dropdown" id="nav-dropdown-siklus">
+      <span class="nav-dropdown-toggle">siklus ▾</span>
+      <div class="nav-dropdown-menu">
+        <a href="siklus1.html"><span class="dd-num">01</span> Siklus 1</a>
+        <a href="siklus2.html"><span class="dd-num">02</span> Siklus 2</a>
+        <a href="siklus3.html"><span class="dd-num">03</span> Siklus 3</a>
+      </div>
+    </li>
+
+    <li><a href="refleksi.html">refleksi</a></li>
     <li><a href="index.html#kontak">kontak</a></li>
   </ul>
-  <div class="nav-status">
-    <div class="status-dot"></div>
-    <span class="status-full">online • Siklus 1</span>
-    <span class="status-short">online</span>
-  </div>
+  <div class="nav-status"><div class="status-dot"></div>Siklus 1</div>
 </nav>
 
 <div class="page-wrap">
@@ -235,58 +240,10 @@
   </div>
 </section>
 
-<!-- ARTEFAK 4: VIDEO -->
-<section id="video" class="reveal" style="background:var(--bg2);max-width:100%;padding:4rem 2rem;">
-  <div style="max-width:1080px;margin:0 auto;">
-  <div class="prompt"><span class="prompt-path">~/siklus1/video-praktik</span></div>
-  <div class="sec-label">04 // video praktik mengajar</div>
-  <div class="artefak-block">
-    <div class="artefak-header">
-      <div class="artefak-icon">🎬</div>
-      <div><div class="artefak-type">video praktik mengajar · siklus 1</div><div class="artefak-title">Video Praktik Mengajar — Siklus 1</div></div>
-      <a href="GANTI_LINK_GDRIVE_VIDEO_S1" target="_blank" class="media-link" style="margin-left:auto;">↗ buka di Drive</a>
-    </div>
-    <div class="artefak-body">
-      <div class="analisis-tabs">
-        <button class="atab active" data-tab="lk4" onclick="switchTab('video-s1','lk4')">LK 4 — Analisis</button>
-        <button class="atab" data-tab="uts" onclick="switchTab('video-s1','uts')">UTS — Refleksi</button>
-        <button class="atab" data-tab="file" onclick="switchTab('video-s1','file')">File &amp; Preview</button>
-      </div>
-      <div id="video-s1">
-        <div class="analisis-panel panel-lk4 active">
-          <div class="analisis-grid">
-            <div class="analisis-card"><div class="analisis-card-label">Konteks</div><div class="analisis-card-text">[Kapan video direkam, berapa durasi, bagian pembelajaran apa yang direkam?]</div></div>
-            <div class="analisis-card"><div class="analisis-card-label">Tujuan</div><div class="analisis-card-text">[Sebagai bahan refleksi, dokumentasi, atau evaluasi oleh GP dan DPL?]</div></div>
-            <div class="analisis-card"><div class="analisis-card-label">Kelebihan</div><div class="analisis-card-text">[Apa yang terlihat berjalan baik dari rekaman — pengelolaan kelas, interaksi siswa, penyampaian materi?]</div></div>
-            <div class="analisis-card"><div class="analisis-card-label">Kekurangan</div><div class="analisis-card-text">[Apa yang perlu diperbaiki — penguasaan kelas, kecepatan bicara, penggunaan papan tulis, dll?]</div></div>
-          </div>
-          <div class="analisis-card" style="margin-top:0;"><div class="analisis-card-label">Kajian Teori</div><div class="analisis-card-text">[Schön's reflective practice — bagaimana video ini digunakan sebagai media refleksi-on-action? Atau teori observasi dan supervisi klinis lain dari matakuliah PPG.]</div></div>
-        </div>
-        <div class="analisis-panel panel-uts">
-          <div class="refleksi-grid-s">
-            <div class="refleksi-card-s kendala"><div class="rc-label">Kendala</div><div class="rc-text">[Kendala teknis atau non-teknis saat merekam — kualitas audio, posisi kamera, siswa tidak kondusif?]</div></div>
-            <div class="refleksi-card-s teori"><div class="rc-label">Teori Pedagogi yang Diadopsi</div><div class="rc-text">[Bagaimana video ini mencerminkan penerapan teori yang dipelajari — misalnya penggunaan pertanyaan Socratik, diferensiasi dalam interaksi, dll?]</div></div>
-            <div class="refleksi-card-s faktor"><div class="rc-label">Faktor Keberhasilan</div><div class="rc-text">[Apa yang membuat sesi pembelajaran ini berhasil menurut rekaman?]</div></div>
-            <div class="refleksi-card-s adaptasi"><div class="rc-label">Kemungkinan Adaptasi</div><div class="rc-text">[Apa yang akan kamu ubah dari cara mengajar jika situasi kelasnya berbeda?]</div></div>
-          </div>
-        </div>
-        <div class="analisis-panel panel-file">
-          <div class="drive-preview">
-            <div class="drive-icon">🎬</div>
-            <div class="drive-info"><div class="drive-name">Video Praktik Mengajar — Siklus 1.mp4</div><div class="drive-meta">Google Drive · [ukuran] · [durasi] · [tanggal]</div></div>
-            <a href="GANTI_LINK_GDRIVE_VIDEO_S1" target="_blank" class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">buka Drive ↗</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-</section>
-
-<!-- ARTEFAK 5: HASIL KERJA SISWA -->
+<!-- ARTEFAK 4: HASIL KERJA SISWA -->
 <section id="hasil" class="reveal">
   <div class="prompt"><span class="prompt-path">~/siklus1/hasil-kerja-siswa</span></div>
-  <div class="sec-label">05 // hasil kerja &amp; penilaian siswa</div>
+  <div class="sec-label">05 // hasil kerja siswa</div>
   <div class="artefak-block">
     <div class="artefak-header">
       <div class="artefak-icon">✅</div>
@@ -338,7 +295,7 @@
 </section>
 
 <footer>
-  <div><div class="footer-logo">siklus 1 · e-portfolio lk4 · ppg 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
+  <div><div class="footer-logo">siklus 1 · e-portfolio · ppg 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
   <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
 </footer>
 

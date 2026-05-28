@@ -82,6 +82,10 @@ nav {
   white-space: nowrap;
   letter-spacing: 0.06em;
 }
+.nav-links a.active {
+  color: var(--amber);
+  background: var(--amber-dim);
+}
 .nav-links a:first-child { border-left: 1px solid var(--border); }
 .nav-links a:hover { color: var(--amber); background: var(--amber-dim); }
 .nav-status {
@@ -121,6 +125,74 @@ nav {
   margin-left: auto;
 }
 
+/* DROPDOWN SIKLUS */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-toggle {
+  text-decoration: none; color: var(--muted);
+  font-size: 0.72rem; font-weight: 400;
+  padding: 0 1rem; height: 56px;
+  display: flex; align-items: center; gap: 5px;
+  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap; letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.nav-dropdown-toggle::after {
+  content: '_';
+  opacity: 0;
+  font-size: 0.6rem;
+  transition: opacity 0.15s;
+}
+.nav-dropdown:hover .nav-dropdown-toggle,
+.nav-dropdown-toggle.active {
+  color: var(--amber);
+  background: var(--amber-dim);
+}
+.nav-dropdown:hover .nav-dropdown-toggle::after {
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+.nav-dropdown.mobile-open .nav-dropdown-menu {
+  display: block;
+}
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 56px; left: 0;
+  min-width: 160px;
+  background: rgba(13,13,15,0.97);
+  border: 1px solid var(--border2);
+  border-top: 2px solid var(--amber);
+  backdrop-filter: blur(12px);
+  z-index: 200;
+  overflow: hidden;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+.nav-dropdown-menu a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.72rem; color: var(--muted);
+  text-decoration: none; letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.nav-dropdown-menu a:last-child { border-bottom: none; }
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+  color: var(--amber);
+  background: var(--amber-dim);
+}
+.nav-dropdown-menu a .dd-num {
+  font-size: 0.6rem; color: var(--amber);
+  opacity: 0.6; flex-shrink: 0;
+}
+
 /* LAYOUT */
 .page-wrap { position:relative; z-index:1; }
 section { max-width:1080px; margin:0 auto; padding:6rem 2rem; }
@@ -152,8 +224,9 @@ h3 { font-family:var(--sans); font-weight:700; font-size:1.1rem; color:var(--tex
 #home {
   min-height: 100vh;
   display: flex; align-items: center;
-  max-width: 100%;
-  padding: 0;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .hero-inner {
   max-width: 1080px; margin: 0 auto;
@@ -269,6 +342,16 @@ h3 { font-family:var(--sans); font-weight:700; font-size:1.1rem; color:var(--tex
 }
 
 /* FOOTER */
+.kontak-section {
+  background: var(--bg2);
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+.bg2-section {
+  background: var(--bg2);
+  max-width: 100% !important;
+  margin: 0 !important;
+}
 footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-items:center; justify-content:space-between; font-size:0.72rem; color:var(--muted2); flex-wrap:wrap; gap:1rem; }
 .footer-logo { color:var(--amber); font-weight:500; }
 .footer-r { display:flex; gap:1.5rem; }
@@ -713,7 +796,9 @@ footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-i
 
 /* RESPONSIVE */
 @media (max-width:840px) {
-  nav { gap:1rem; }
+  nav {
+    gap:1rem;
+  }
 
   .menu-toggle {
     display: block;
@@ -745,14 +830,34 @@ footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-i
   }
 
   .nav-status {
-    display: flex;
+    position: absolute;
+    right: 3.5rem; /* kanan, tapi tidak nabrak hamburger */
+    top: 50%;
+    transform: translateY(-50%);
   }
+
+  .nav-dropdown-toggle {
+    border-left: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-dropdown-menu a {
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .nav-dropdown-menu a .dd-num {
+    display: none;
+  }
+
   .status-full { display: none; }
   .status-short { display: inline; }
 
   .hero-inner { grid-template-columns: 1fr; }
   .terminal { display: none; }
-  .profil-grid { grid-template-columns:1fr; }
+  .profil-grid { display: flex; flex-direction: column; }
+  .profil-top { grid-template-columns: 1fr; }
+  .profil-top > div:last-child .narasi-section { height: auto; }
   .contact-wrapper { grid-template-columns:1fr; }
   .contact-photo-grid {
     grid-template-columns: 1fr 1fr; /* tetap 2 kolom */
@@ -786,5 +891,22 @@ footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-i
   .model-grid {
     grid-template-columns: 1fr;
   }
-
+  .nav-dropdown-toggle {
+    border-left: none;
+  }
+  .nav-dropdown-menu {
+    position: static;
+    border: none;
+    border-top: none;
+    background: var(--bg3);
+    display: none !important; /* override hover */
+  }
+  .nav-dropdown.mobile-open .nav-dropdown-menu {
+    display: block !important;
+  }
+  .nav-dropdown-menu a {
+    padding-left: 2rem; /* indent biar keliatan nested */
+    font-size: 0.68rem;
+    border-bottom: 1px solid var(--border);
+  }
 }
