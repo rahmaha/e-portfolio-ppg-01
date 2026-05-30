@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisis Siklus 2 </title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-page="siklus2">
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-logo">
+    <span class="path">~/</span>e-portfolio
+  </div>
+<!-- 🔹 HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">← home</a></li>
+    <li><a href="index.html#profil">profil</a></li>
+
+    <!-- DROPDOWN SIKLUS -->
+    <li class="nav-dropdown" id="nav-dropdown-siklus">
+      <span class="nav-dropdown-toggle">siklus ▾</span>
+      <div class="nav-dropdown-menu">
+        <a href="siklus1.html"><span class="dd-num">01</span> Siklus 1</a>
+        <a href="siklus2.html"><span class="dd-num">02</span> Siklus 2</a>
+        <a href="siklus3.html"><span class="dd-num">03</span> Siklus 3</a>
+      </div>
+    </li>
+
+    <li><a href="refleksi.html">refleksi</a></li>
+    <li><a href="index.html#kontak">kontak</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span class="status-full">siklus 02 • PPG Prajabatan 2026</span>
+    <span class="status-short">siklus 02</span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- HERO SIKLUS -->
+<div style="background:var(--bg);padding:8rem 2rem 4rem;max-width:1080px;margin:0 auto;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;color:var(--muted);border:1px solid var(--border2);padding:5px 14px;border-radius:3px;margin-bottom:1.5rem;letter-spacing:0.1em;"><span style="color:var(--amber)">#</span>analisis artefak · ppl terbimbing</div>
+  <h1 style="font-family:var(--sans);font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:0.8rem;">
+    <span style="color:var(--amber);">Siklus 2</span> —<br>Analisis Artefak
+  </h1>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:600px;line-height:1.8;margin-bottom:2rem;">Topik: <strong style="color:var(--text);">Analisi data dengan Spreadsheet</strong> · Kelas: X TKR · Tanggal: 08 dan 16 April 2026 <br>Setiap artefak dianalisis dari sisi konteks, tujuan, kelebihan, kekurangan, kajian teori.</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="index.html#artefak" class="btn-ghost">← kembali ke artefak</a>
+    <a href="siklus3.html" class="btn-primary">siklus 3 →</a>
+  </div>
+</div>
+
+<!-- GALERI DOKUMENTASI SIKLUS 2 -->
+<section class="reveal">
+  <div class="prompt"><span class="prompt-path">~/siklus1/dokumentasi</span></div>
+  <div class="sec-label">00 // dokumentasi kegiatan</div>
+  <h2 style="font-size:1.4rem;">Foto Dokumentasi</h2>
+  <div class="galeri-siklus">
+    <a class="galeri-foto"  target="_blank">
+      <img src="assets/siklus2.jpeg" alt="Dokumentasi Siklus 2"
+        onerror="this.style.opacity='0.2'">
+    </a>
+    <a class="galeri-foto"  target="_blank">
+      <img src="assets/siklus2_4.jpeg" alt="Dokumentasi Siklus 2"
+        onerror="this.style.opacity='0.2'">
+    </a>
+    <a class="galeri-foto" target="_blank">
+      <img src="assets/siklus2_5.jpeg" alt="Dokumentasi Siklus 2"
+        onerror="this.style.opacity='0.2'">
+    </a>
+    <a class="galeri-foto" target="_blank">
+      <img src="assets/siklus2_2.jpeg" alt="Dokumentasi Siklus 2"
+        onerror="this.style.opacity='0.2'">
+    </a>
+    <a class="galeri-foto" target="_blank">
+      <img src="assets/siklus2_3.jpeg" alt="Dokumentasi Siklus 2"
+        onerror="this.style.opacity='0.2'">
+    </a>
+  </div>
+</section>
+
+<!-- ARTEFAK 1: MODUL AJAR -->
+<section id="modul" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/siklus2/modul-ajar</span></div>
+  <div class="sec-label">01 // modul ajar / rpp</div>
+
+  <div class="artefak-block">
+    <div class="artefak-header">
+      <div class="artefak-icon">📄</div>
+      <div>
+        <div class="artefak-type">modul ajar · siklus 2</div>
+        <div class="artefak-title">Modul Ajar — Analisis Data dengan Spreadsheet</div>
+      </div>
+      <a href="https://drive.google.com/file/d/1yFLzbJeKBm-5WGDQyLnBkw41wqbVsrLJ/view" target="_blank" class="media-link" style="margin-left:auto;">↗ buka di Drive</a>
+    </div>
+    <div class="artefak-body">
+      <div class="analisis-tabs">
+        <button class="atab active" data-tab="lk4" onclick="switchTab('modul-s2','lk4')">Analisis</button>
+        <button class="atab" data-tab="file" onclick="switchTab('modul-s2','file')">File &amp; Preview</button>
+      </div>
+
+      <div id="modul-s2">
+        <!-- TAB Analisis-->
+        <div class="analisis-panel panel-lk4 active">
+          <div class="analisis-grid">
+            <div class="analisis-card">
+              <div class="analisis-card-label">Konteks</div>
+              <div class="analisis-card-text">Kelas X TKR, 2 pertemuan, materi analisis data dengan spreadsheet, CP Informatika elemen analisis data</div>
+            </div>
+            <div class="analisis-card">
+              <div class="analisis-card-label">Tujuan</div>
+              <div class="analisis-card-text">Memandu siswa menggunakan fungsi-fungsi dasar Excel untuk mengolah data yang sudah mereka miliki</div>
+            </div>
+            <div class="analisis-card">
+              <div class="analisis-card-label">Kelebihan</div>
+              <div class="analisis-card-text">Penggunaan data yang dikaitkan dengan bidang mereka, meningkatkan relevansi dan motivasi belajar secara signifikan</div>
+            </div>
+            <div class="analisis-card">
+              <div class="analisis-card-label">Kekurangan</div>
+              <div class="analisis-card-text">Tingkat kemampuan siswa yang beragam dan berbeda</div>
+            </div>
+          </div>
+          <div class="analisis-card" style="margin-top:0;">
+            <div class="analisis-card-label">Kajian Teori yang Terintegrasi</div>
+            <div class="analisis-card-text">
+             Meaningful learning Ausubel — materi baru dikaitkan dengan prior knowledge (data milik siswa); scaffolding Vygotsky untuk siswa yang membutuhkan bantuan lebih.
+            </div>
+          </div>
+        </div>
+        <!-- TAB FILE -->
+        <div class="analisis-panel panel-file">
+          <div style="padding:1.4rem 1.6rem;">
+            <!-- thumbnail klik buka Drive -->
+            <a href="https://drive.google.com/file/d/1yFLzbJeKBm-5WGDQyLnBkw41wqbVsrLJ/view"
+              target="_blank"
+              style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                    border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                    margin-bottom:1rem;text-decoration:none;position:relative;">
+              <img src="https://drive.google.com/thumbnail?id=1yFLzbJeKBm-5WGDQyLnBkw41wqbVsrLJ&sz=w800"
+                style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                onerror="this.style.display='none'">
+            </a>
+            <div class="drive-preview">
+              <div class="drive-icon">📄</div>
+              <div class="drive-info">
+                <div class="drive-name">Modul Ajar Siklus 1</div>
+                <div class="drive-meta">Google Drive</div>
+              </div>
+              <a href="https://drive.google.com/file/d/1yFLzbJeKBm-5WGDQyLnBkw41wqbVsrLJ/view"
+                target="_blank" class="btn-primary"
+                style="font-size:0.72rem;padding:8px 16px;">buka Drive ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTEFAK 2: MEDIA -->
+<section id="media" class="reveal" style="background:var(--bg2);max-width:100%;padding:4rem 2rem;">
+  <div style="max-width:1080px;margin:0 auto;">
+  <div class="prompt"><span class="prompt-path">~/siklus2/media-pembelajaran</span></div>
+  <div class="sec-label">02 // media pembelajaran</div>
+
+  <div class="artefak-block">
+    <div class="artefak-header">
+      <div class="artefak-icon">📊</div>
+      <div>
+        <div class="artefak-type">media pembelajaran · siklus 2</div>
+        <div class="artefak-title">Slide — Pengumpulan Data dengan Google Form</div>
+      </div>
+    </div>
+    <div class="artefak-body">
+      <div class="analisis-tabs">
+        <button class="atab active" data-tab="lk4" onclick="switchTab('media-s2','lk4')">Analisis</button>
+        <button class="atab" data-tab="file" onclick="switchTab('media-s2','file')">File &amp; Preview</button>
+      </div>
+      <div id="media-s2">
+        <div class="analisis-panel panel-lk4 active">
+          <div class="analisis-grid">
+            <div class="analisis-card"><div class="analisis-card-label">Konteks</div><div class="analisis-card-text">Digunakan sebagai panduan visual selama pembelajaran berlangsung, ditampilkan via proyektor</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Tujuan</div><div class="analisis-card-text">Menyajikan rumus - rumus di dalam excel (SUM, COUNT, MIN, MAX, IF, COUNTIF, SUMIF, VLOOKUP, HLOOKUP) beserta penjelasan dari rumus tersebut</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kelebihan</div><div class="analisis-card-text">Visual cukup menarik, langkah-langkah penggunaan rumus disajikan dengan screenshot yang jelas dan mudah diikuti</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kekurangan</div><div class="analisis-card-text">Pemilihan font dan hiasan dalam slide, sehingga siswa lebih fokus dibagian tersebut</div></div>
+          </div>
+          <div class="analisis-card" style="margin-top:0;"><div class="analisis-card-label">Kajian Teori</div><div class="analisis-card-text">Prinsip multimedia Mayer — coherence principle dan signaling principle; idealnya teks di slide diminimalkan dan diganti visual yang lebih dominan</div></div>
+        </div>
+        <div class="analisis-panel panel-file">
+          <div style="padding:1.4rem 1.6rem;">
+
+            <!-- SUB-TAB PERTEMUAN -->
+            <div style="display:flex;gap:0;border:1px solid var(--border2);
+                        border-radius:6px;overflow:hidden;width:fit-content;
+                        margin-bottom:1.2rem;">
+              <button onclick="switchPertemuan('media-s2','pt1')"
+                id="pt1-btn-media-s2"
+                style="padding:6px 16px;background:var(--amber-dim);color:var(--amber);
+                      border:none;font-family:var(--mono);font-size:0.7rem;
+                      cursor:pointer;border-right:1px solid var(--border2);">
+                Pertemuan 1
+              </button>
+              <button onclick="switchPertemuan('media-s2','pt2')"
+                id="pt2-btn-media-s2"
+                style="padding:6px 16px;background:transparent;color:var(--muted);
+                      border:none;font-family:var(--mono);font-size:0.7rem;cursor:pointer;">
+                Pertemuan 2
+              </button>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 1 -->
+            <div id="pt1-media-s2">
+              <a href="https://docs.google.com/presentation/d/1feSb8Pryy_PdjIOvYvrXuKNrfsGE75y4/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1feSb8Pryy_PdjIOvYvrXuKNrfsGE75y4&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">📊</div>
+                <div class="drive-info">
+                  <div class="drive-name">Slide Pertemuan 1 — Fungsi Dasar Excel</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://docs.google.com/presentation/d/1feSb8Pryy_PdjIOvYvrXuKNrfsGE75y4/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 2 -->
+            <div id="pt2-media-s2" style="display:none;">
+              <a href="https://docs.google.com/presentation/d/1S7Pc0mfbk0XSguzgwl8Lnj5Sf_vBBYJr/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1S7Pc0mfbk0XSguzgwl8Lnj5Sf_vBBYJr&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">📊</div>
+                <div class="drive-info">
+                  <div class="drive-name">Slide Pertemuan 2 — VLOOKUP & HLOOKUP</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://docs.google.com/presentation/d/1S7Pc0mfbk0XSguzgwl8Lnj5Sf_vBBYJr/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- ARTEFAK 3: LKPD -->
+<section id="lkpd" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/siklus2/lkpd</span></div>
+  <div class="sec-label">03 // lkpd</div>
+  <div class="artefak-block">
+    <div class="artefak-header">
+      <div class="artefak-icon">📝</div>
+      <div><div class="artefak-type">lkpd · siklus 2</div><div class="artefak-title">LKPD — Pengumpulan Data dengan Google Form</div></div>
+    </div>
+    <div class="artefak-body">
+      <div class="analisis-tabs">
+        <button class="atab active" data-tab="lk4" onclick="switchTab('lkpd-s2','lk4')">Analisis</button>
+        <button class="atab" data-tab="file" onclick="switchTab('lkpd-s2','file')">File &amp; Preview</button>
+      </div>
+      <div id="lkpd-s2">
+        <div class="analisis-panel panel-lk4 active">
+          <div class="analisis-grid">
+            <div class="analisis-card"><div class="analisis-card-label">Konteks</div><div class="analisis-card-text">Dikerjakan secara kelompok saat sesi praktik, memandu siswa merancang pertanyaan survei dan mengoperasikan rumus dalam spreadsheet (SUM, MIN, MAX, COUNT, IF, SUMIF, COUNTIF, VLOOKUP, HLOOKUP)</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Tujuan</div><div class="analisis-card-text">Memastikan setiap siswa menggunakan rumus di dalam spreadsheet secara langsung dan terdokumentasi</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kelebihan</div><div class="analisis-card-text">Pertanyaan panduan cukup membantu siswa yang bingung memulai, membantu siswa secara bertahap</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kekurangan</div><div class="analisis-card-text">Tidak ada rubrik penilaian yang jelas di dalam LKPD dan beberapa rumus termasuk tahap advance (VLOOKUP, HLOOKUP)</div></div>
+          </div>
+          <div class="analisis-card" style="margin-top:0;"><div class="analisis-card-label">Kajian Teori</div><div class="analisis-card-text">Pembelajaran berbasis aktivitas (activity-based learning) — siswa belajar melalui praktik bukan sekadar mendengar; sejalan dengan prinsip konstruktivisme</div></div>
+        </div>
+        <div class="analisis-panel panel-file">
+          <div style="padding:1.4rem 1.6rem;">
+
+            <!-- SUB-TAB PERTEMUAN -->
+            <div style="display:flex;gap:0;border:1px solid var(--border2);
+                        border-radius:6px;overflow:hidden;width:fit-content;
+                        margin-bottom:1.2rem;">
+              <button onclick="switchPertemuan('lkpd-s2','pt1')"
+                id="pt1-btn-lkpd-s2"
+                style="padding:6px 16px;background:var(--amber-dim);color:var(--amber);
+                      border:none;font-family:var(--mono);font-size:0.7rem;
+                      cursor:pointer;border-right:1px solid var(--border2);">
+                Pertemuan 1
+              </button>
+              <button onclick="switchPertemuan('lkpd-s2','pt2')"
+                id="pt2-btn-lkpd-s2"
+                style="padding:6px 16px;background:transparent;color:var(--muted);
+                      border:none;font-family:var(--mono);font-size:0.7rem;cursor:pointer;">
+                Pertemuan 2
+              </button>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 1 -->
+            <div id="pt1-lkpd-s2">
+              <a href="https://drive.google.com/file/d/1WHqXQ162c1EcTndB98Stg1fI3kjVNsGb/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1WHqXQ162c1EcTndB98Stg1fI3kjVNsGb&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">📝</div>
+                <div class="drive-info">
+                  <div class="drive-name">LKPD — Pertemuan 2</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://drive.google.com/file/d/1WHqXQ162c1EcTndB98Stg1fI3kjVNsGb/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 2 -->
+            <div id="pt2-lkpd-s2" style="display:none;">
+              <a href="https://docs.google.com/spreadsheets/d/1yKaY96VLqheqRSYmG8GojkQJimio7uJp/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1yKaY96VLqheqRSYmG8GojkQJimio7uJp&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">📝</div>
+                <div class="drive-info">
+                  <div class="drive-name">LKPD — Pertemuan 2</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://docs.google.com/spreadsheets/d/1yKaY96VLqheqRSYmG8GojkQJimio7uJp/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTEFAK 4: HASIL KERJA SISWA -->
+<section id="hasil" class="reveal">
+  <div class="prompt"><span class="prompt-path">~/siklus2/hasil-kerja-siswa</span></div>
+  <div class="sec-label">05 // hasil kerja siswa</div>
+  <div class="artefak-block">
+    <div class="artefak-header">
+      <div class="artefak-icon">✅</div>
+      <div><div class="artefak-type">hasil kerja siswa · siklus 2</div><div class="artefak-title">Hasil Kerja Siswa — Siklus 1</div></div>
+    </div>
+    <div class="artefak-body">
+      <div class="analisis-tabs">
+        <button class="atab active" data-tab="lk4" onclick="switchTab('hasil-s2','lk4')">Analisis</button>
+        <button class="atab" data-tab="file" onclick="switchTab('hasil-s2','file')">File &amp; Preview</button>
+      </div>
+      <div id="hasil-s2">
+        <div class="analisis-panel panel-lk4 active">
+          <div class="analisis-grid">
+            <div class="analisis-card"><div class="analisis-card-label">Konteks</div><div class="analisis-card-text">Berupa lembar lkpd yang berupa spreadsheet dan telah diisi sesuai petunjuk di dalam lkpd tersebut</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Tujuan</div><div class="analisis-card-text">Mengukur ketercapaian tujuan pembelajaran — apakah siswa mampu menggunakan rumus dalam spreadsheet dengan data yang ada</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kelebihan</div><div class="analisis-card-text">Mayoritas siswa berhasil mengerjakan lkpd dengan baik dan tepat waktu serta menunjukkan kolaborasi dengan teman sekelompok</div></div>
+            <div class="analisis-card"><div class="analisis-card-label">Kekurangan</div><div class="analisis-card-text">Beberapa kelompok mengalami keterlambatan dalam pengumpulan, hal ini dikarenakan kemampuan mereka yang berbeda terhadap pemahaman materi</div></div>
+          </div>
+          <div class="analisis-card" style="margin-top:0;"><div class="analisis-card-label">Kajian Teori</div><div class="analisis-card-text">Asesmen autentik — hasil kerja dinilai bukan dari jawaban soal melainkan dari produk nyata yang dibuat siswa sesuai konteks dunia nyata</div></div>
+        </div>
+        <div class="analisis-panel panel-file">
+          <div style="padding:1.4rem 1.6rem;">
+
+            <!-- SUB-TAB PERTEMUAN -->
+            <div style="display:flex;gap:0;border:1px solid var(--border2);
+                        border-radius:6px;overflow:hidden;width:fit-content;
+                        margin-bottom:1.2rem;">
+              <button onclick="switchPertemuan('hasil-s2','pt1')"
+                id="pt1-btn-hasil-s2"
+                style="padding:6px 16px;background:var(--amber-dim);color:var(--amber);
+                      border:none;font-family:var(--mono);font-size:0.7rem;
+                      cursor:pointer;border-right:1px solid var(--border2);">
+                Pertemuan 1
+              </button>
+              <button onclick="switchPertemuan('hasil-s2','pt2')"
+                id="pt2-btn-hasil-s2"
+                style="padding:6px 16px;background:transparent;color:var(--muted);
+                      border:none;font-family:var(--mono);font-size:0.7rem;cursor:pointer;">
+                Pertemuan 2
+              </button>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 1 -->
+            <div id="pt1-hasil-s2">
+              <a href="https://drive.google.com/file/d/1ha33l59WWqJl0ggKHMrXaXd4Vl1qFUP7/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1ha33l59WWqJl0ggKHMrXaXd4Vl1qFUP7&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">✅</div>
+                <div class="drive-info">
+                  <div class="drive-name">Hasil Kerja Siswa - Pertemuan 1</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://drive.google.com/file/d/1ha33l59WWqJl0ggKHMrXaXd4Vl1qFUP7/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+
+            <!-- KONTEN PERTEMUAN 2 -->
+            <div id="pt2-hasil-s2" style="display:none;">
+              <a href="https://docs.google.com/spreadsheets/d/1NqS9zr_MG0tRcEHBEgAzkj7n1obTVKj1/view" target="_blank"
+                style="display:block;width:100%;aspect-ratio:16/9;background:var(--bg3);
+                      border:1px solid var(--border2);border-radius:6px;overflow:hidden;
+                      margin-bottom:1rem;text-decoration:none;position:relative;">
+                <img src="https://drive.google.com/thumbnail?id=1NqS9zr_MG0tRcEHBEgAzkj7n1obTVKj1&sz=w800"
+                  style="width:100%;height:100%;object-fit:cover;opacity:0.7;"
+                  onerror="this.style.display='none'">
+                <div style="position:absolute;inset:0;display:flex;align-items:center;
+                            justify-content:center;color:var(--amber);font-size:0.8rem;
+                            font-family:var(--mono);">▶ klik untuk buka file</div>
+              </a>
+              <div class="drive-preview">
+                <div class="drive-icon">✅</div>
+                <div class="drive-info">
+                  <div class="drive-name">Hasil Kerja Siswa - Pertemuan 1</div>
+                  <div class="drive-meta">Google Drive</div>
+                </div>
+                <a href="https://docs.google.com/spreadsheets/d/1NqS9zr_MG0tRcEHBEgAzkj7n1obTVKj1/view" target="_blank"
+                  class="btn-primary" style="font-size:0.72rem;padding:8px 16px;">
+                  buka Drive ↗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAVIGASI BAWAH -->
+<section style="padding:3rem 2rem;">
+  <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+    <a href="index.html#artefak" class="btn-ghost">← kembali ke semua artefak</a>
+    <a href="siklus3.html" class="btn-primary">lanjut ke siklus 3 →</a>
+  </div>
+</section>
+
+<footer>
+  <div><div class="footer-logo">siklus 2 · e-portfolio · ppg 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
+  <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
+</footer>
+
+</div>
+<script src="shared.js"></script>
+</body>
+</html>

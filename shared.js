@@ -17,12 +17,50 @@ function filterMedia(cat, btn) {
 // ANALISIS TABS
 // ===============================
 function switchTab(artefakId, tabName) {
-  document.querySelectorAll(`#${artefakId} .atab`).forEach(t => t.classList.remove('active'));
-  document.querySelectorAll(`#${artefakId} .analisis-panel`).forEach(p => p.classList.remove('active'));
-  document.querySelector(`#${artefakId} .atab[data-tab="${tabName}"]`).classList.add('active');
-  document.querySelector(`#${artefakId} .panel-${tabName}`).classList.add('active');
+  // cari container parent dari id artefak
+  const container = document.getElementById(artefakId);
+  if (!container) return;
+
+  // tabs ada di sibling sebelumnya (.analisis-tabs)
+  const tabsWrapper = container.previousElementSibling;
+
+  // reset semua panel
+  container.querySelectorAll('.analisis-panel').forEach(p => p.classList.remove('active'));
+
+  // reset semua tab button
+  if (tabsWrapper && tabsWrapper.classList.contains('analisis-tabs')) {
+    tabsWrapper.querySelectorAll('.atab').forEach(t => t.classList.remove('active'));
+    // aktifkan tab yang sesuai
+    const activeTab = tabsWrapper.querySelector(`.atab[data-tab="${tabName}"]`);
+    if (activeTab) activeTab.classList.add('active');
+  }
+
+  // aktifkan panel yang sesuai
+  const activePanel = container.querySelector(`.panel-${tabName}`);
+  if (activePanel) activePanel.classList.add('active');
 }
 
+// tab khusus siklus 2 karena 2 pertemuan
+function switchPertemuan(artefakId, pertemuan) {
+  // sembunyikan semua pertemuan
+  ['pt1','pt2'].forEach(pt => {
+    const el = document.getElementById(pt + '-' + artefakId);
+    if (el) el.style.display = 'none';
+    const btn = document.getElementById(pt + '-btn-' + artefakId);
+    if (btn) {
+      btn.style.background = 'transparent';
+      btn.style.color = 'var(--muted)';
+    }
+  });
+  // tampilkan yang dipilih
+  const target = document.getElementById(pertemuan + '-' + artefakId);
+  if (target) target.style.display = 'block';
+  const activeBtn = document.getElementById(pertemuan + '-btn-' + artefakId);
+  if (activeBtn) {
+    activeBtn.style.background = 'var(--amber-dim)';
+    activeBtn.style.color = 'var(--amber)';
+  }
+}
 // ===============================
 // MODAL
 // ===============================
