@@ -68,7 +68,7 @@ nav {
 .nav-logo span { color: var(--muted); }
 .nav-links {
   display: flex; gap: 0; list-style: none;
-  overflow-x: auto; scrollbar-width: none;
+ overflow: visible; scrollbar-width: none;
   flex: 1;
 }
 .nav-links::-webkit-scrollbar { display: none; }
@@ -125,7 +125,7 @@ nav {
   margin-left: auto;
 }
 
-/* DROPDOWN SIKLUS */
+/* DROPDOWN */
 .nav-dropdown {
   position: relative;
 }
@@ -146,7 +146,7 @@ nav {
   font-size: 0.6rem;
   transition: opacity 0.15s;
 }
-.nav-dropdown:hover .nav-dropdown-toggle,
+.nav-dropdown:hover .nav-dropdown-menu { display:block; }
 .nav-dropdown-toggle.active {
   color: var(--amber);
   background: var(--amber-dim);
@@ -167,12 +167,11 @@ nav {
   border: 1px solid var(--border2);
   border-top: 2px solid var(--amber);
   backdrop-filter: blur(12px);
-  z-index: 200;
+  z-index: 99999;
   overflow: hidden;
 }
-.nav-dropdown:hover .nav-dropdown-menu {
-  display: block;
-}
+
+
 .nav-dropdown-menu a {
   display: flex; align-items: center; gap: 10px;
   padding: 0.75rem 1.2rem;
@@ -793,6 +792,275 @@ footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-i
   border: none;
   display: block;
 }
+/* ── PAGE-SPECIFIC STYLES ── */
+.refleksi-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg);
+  padding: 8rem 2rem 4rem;
+}
+.refleksi-hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+}
+.page-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  color: var(--muted);
+  border: 1px solid var(--border2);
+  padding: 5px 14px;
+  border-radius: 3px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+.page-badge::before { content: '#'; color: var(--amber); }
+
+/* REFLEKSI CARDS */
+.refleksi-pertanyaan {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.rp-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.rp-card-header {
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.rp-num {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--amber);
+  opacity: 0.4;
+  line-height: 1;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+.rp-question {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+.rp-card-body {
+  padding: 1.6rem;
+}
+.rp-card-body p {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+.rp-card-body p:last-child { margin-bottom: 0; }
+.rp-card-body strong { color: var(--text); }
+.rp-card-body em { color: var(--amber); font-style: italic; }
+
+/* HIGHLIGHT BOX */
+.rp-highlight {
+  background: var(--amber-dim);
+  border: 1px solid rgba(232,168,48,0.2);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 6px 6px 0;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.8;
+}
+.rp-highlight-label {
+  font-size: 0.62rem;
+  color: var(--amber);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+/* SARAN LIST */
+.saran-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.saran-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.saran-item::before {
+  content: '→';
+  color: var(--amber);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* RTL GRID */
+.rtl-grid-r {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.rtl-card-r {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+.rtl-card-label {
+  font-size: 0.62rem;
+  color: var(--amber);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.rtl-card-text {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* FILOSOFI */
+.filosofi-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.filosofi-para {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+}
+.filosofi-para::before {
+  content: attr(data-num);
+  position: absolute;
+  right: 1.2rem;
+  top: 0.8rem;
+  font-family: var(--sans);
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--amber);
+  opacity: 0.06;
+  line-height: 1;
+  pointer-events: none;
+}
+.filosofi-label {
+  font-size: 0.66rem;
+  color: var(--amber);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filosofi-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 30px;
+  background: var(--amber);
+  opacity: 0.4;
+}
+.filosofi-para p {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.95;
+  margin-bottom: 0.8rem;
+}
+.filosofi-para p:last-child { margin-bottom: 0; }
+.filosofi-para strong { color: var(--text); }
+.filosofi-para em { color: var(--amber-l); font-style: italic; }
+.teori-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.65rem;
+  padding: 3px 10px;
+  background: rgba(58,184,160,0.1);
+  color: var(--teal);
+  border: 1px solid rgba(58,184,160,0.25);
+  border-radius: 20px;
+  margin: 0.6rem 0.3rem 0 0;
+  letter-spacing: 0.06em;
+}
+
+/* PENUTUP QUOTE */
+.penutup-quote {
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-left: 3px solid var(--amber);
+  border-radius: 0 10px 10px 0;
+  padding: 2rem 2.4rem;
+  position: relative;
+  margin-top: 1rem;
+}
+.pq-mark {
+  font-family: var(--sans);
+  font-size: 5rem;
+  color: var(--amber);
+  opacity: 0.12;
+  line-height: 0.8;
+  margin-bottom: 0.5rem;
+}
+.pq-text {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.9;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.pq-src {
+  font-size: 0.75rem;
+  color: var(--amber);
+  opacity: 0.8;
+}
+
+.galeri-siklus {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+  margin-bottom: 2.5rem;
+}
+.galeri-foto {
+  aspect-ratio: 4/3;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  cursor: pointer;
+  transition: border-color 0.15s, transform 0.15s;
+  display: block;
+}
+.galeri-foto:hover { border-color: var(--amber); transform: scale(1.02); }
+.galeri-foto img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: brightness(0.88);
+  transition: filter 0.2s;
+}
+.galeri-foto:hover img { filter: brightness(1); }
+
 
 /* RESPONSIVE */
 @media (max-width:840px) {
@@ -909,4 +1177,8 @@ footer { border-top:1px solid var(--border); padding:2rem; display:flex; align-i
     font-size: 0.68rem;
     border-bottom: 1px solid var(--border);
   }
+  .refleksi-hero { padding: 7rem 1.5rem 3rem; min-height: auto; }
+  .rp-card-body p { font-size: 0.85rem; }
+  .filosofi-para p { font-size: 0.86rem; }
+  .pq-text { font-size: 0.92rem; }
 }
