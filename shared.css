@@ -1236,13 +1236,6 @@ body.modal-open { overflow: hidden; }
   .nav-dropdown-toggle {
     border-left: none;
   }
-  .nav-dropdown-menu {
-    position: static;
-    border: none;
-    border-top: none;
-    background: var(--bg3);
-    display: none !important; /* override hover */
-  }
   .nav-dropdown.mobile-open .nav-dropdown-menu {
     display: block !important;
   }
@@ -1255,4 +1248,19 @@ body.modal-open { overflow: hidden; }
   .rp-card-body p { font-size: 0.85rem; }
   .filosofi-para p { font-size: 0.86rem; }
   .pq-text { font-size: 0.92rem; }
+   /* fix gap section di mobile */
+  section { padding: 3rem 1.2rem; }
+  .lead { margin-bottom: 1.2rem; }
+
+  /* fix hero padding mobile */
+  .hero-inner { padding: 5rem 1.2rem 2rem !important; }
+
+  /* fix profil gap */
+  .profil-bottom { gap: 0.8rem; }
+  .profil-top { gap: 1rem; }
+  .narasi-section { padding: 1rem 1.2rem; }
+
+  /* fix dropdown conflict — hapus display:none !important */
+  .nav-dropdown-menu { display: none; position: static;}
+  .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
 }
