@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Portfolio — Rahma Hayuning Astuti</title>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body data-page="index">
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-logo">
+    <span class="path">~/</span>e-portfolio
+  </div>
+<!-- 🔹 HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">← home</a></li>
+    <li><a href="index.html#profil">profil</a></li>
+
+    <!-- DROPDOWN SIKLUS -->
+    <li class="nav-dropdown" id="nav-dropdown-siklus">
+      <span class="nav-dropdown-toggle">siklus ▾</span>
+      <div class="nav-dropdown-menu">
+        <a href="siklus1.html"><span class="dd-num">01</span> Siklus 1</a>
+        <a href="siklus2.html"><span class="dd-num">02</span> Siklus 2</a>
+        <a href="siklus3.html"><span class="dd-num">03</span> Siklus 3</a>
+      </div>
+    </li>
+
+    <li><a href="refleksi.html">refleksi</a></li>
+    <li><a href="refleksi-sem01.html">refleksi sem 01</a></li>
+    <li><a href="index.html#kontak">kontak</a></li>
+  </ul>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    <span class="status-full">seminar • PPG Prajabatan 2026</span>
+    <span class="status-short">seminar</span>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+<!-- HERO SIKLUS -->
+<div style="background:var(--bg);padding:8rem 2rem 4rem;max-width:1080px;margin:0 auto;">
+  <div style="display:inline-flex;align-items:center;gap:8px;font-size:0.7rem;color:var(--muted);border:1px solid var(--border2);padding:5px 14px;border-radius:3px;margin-bottom:1.5rem;letter-spacing:0.1em;"><span style="color:var(--amber)">#</span>analisis artefak · ppl terbimbing</div>
+  <h1 style="font-family:var(--sans);font-size:clamp(2rem,4vw,3rem);font-weight:800;line-height:1.1;margin-bottom:0.8rem;">
+    <span style="color:var(--amber);">Refleksi</span> —<br> Mata Kuliah Semester 01
+  </h1>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:600px;line-height:1.8;margin-bottom:2rem;">refleksi 6 mata kuliah yang dipelajari selama semester 01 untuk matkul seminar pendidikan profesi guru</p>
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="refleksi.html" class="btn-ghost">← refleksi ppl</a>
+    <a href="index.html#kontak" class="btn-primary">kontak →</a>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+
+
+<!-- ARTEFAK -->
+<section id="artefak" class="reveal">
+
+  <div class="prompt">
+    <span class="prompt-path">~/refleksi</span> — pengalaman belajar semester 1
+  </div>
+
+  <div class="sec-label">01 // refleksi mata kuliah</div>
+
+  <h2>Refleksi Pengalaman Belajar</h2>
+
+  <p class="lead">
+    dokumentasi refleksi semester 1 — connection, challenge, concept, dan change
+  </p>
+
+
+  <!-- =====================================================
+       CARD GRID
+       ===================================================== -->
+
+  <div class="media-grid" id="mediaGrid">
+
+
+    <!-- =====================================================
+         01 — FILOSOFI PENDIDIKAN
+         ===================================================== -->
+
+    <div class="media-card" data-cat="filosofi">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">📖</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 01</div>
+
+        <div class="media-title">
+          Filosofi Pendidikan dan Pendidikan Nilai
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-filosofi')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         02 — PESERTA DIDIK
+         ===================================================== -->
+
+    <div class="media-card" data-cat="peserta-didik">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">🧠</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 02</div>
+
+        <div class="media-title">
+          Peserta Didik dan Pemahamannya
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-peserta-didik')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         03 — PEMBELAJARAN MENDALAM
+         ===================================================== -->
+
+    <div class="media-card" data-cat="pembelajaran-mendalam">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">🔎</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 03</div>
+
+        <div class="media-title">
+          Pembelajaran Mendalam dan Asesmen Dasar
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-mendalam')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         04 — PPL
+         ===================================================== -->
+
+    <div class="media-card" data-cat="ppl">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">🏫</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 04</div>
+
+        <div class="media-title">
+          PPL Terbimbing
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-ppl')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         05 — GROWTH MINDSET
+         ===================================================== -->
+
+    <div class="media-card" data-cat="growth-mindset">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">🌱</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 05</div>
+
+        <div class="media-title">
+          Pola Pikir Bertumbuh
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-growth')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         06 — PEMBELAJARAN KREATIF
+         ===================================================== -->
+
+    <div class="media-card" data-cat="pembelajaran-kreatif">
+
+      <div class="media-thumb">
+        <div class="media-thumb-icon">💡</div>
+        <span class="media-type-badge badge-pdf">PDF</span>
+      </div>
+
+      <div class="media-info">
+
+        <div class="media-cat">refleksi · 06</div>
+
+        <div class="media-title">
+          Pembelajaran Kreatif dan Inovatif
+        </div>
+
+        <button
+          class="media-detail-btn"
+          onclick="openModal('modal-kreatif')">
+          buka refleksi →
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 01 — FILOSOFI
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-filosofi">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">📖</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — Filosofi Pendidikan dan Pendidikan Nilai
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-filosofi')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/1ukkceC4iVkLgC-pnBDJxCPcDk2jEHJ6d/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – Filosofi Pendidikan dan Pendidikan Nilai
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/1ukkceC4iVkLgC-pnBDJxCPcDk2jEHJ6d/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 02 — PESERTA DIDIK
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-peserta-didik">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">🧠</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — Peserta Didik dan Pemahamannya
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-peserta-didik')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/194LyjFyhoiouozHWtWZirEPlHgH-OufL/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – Peserta Didik dan Pemahamannya
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/194LyjFyhoiouozHWtWZirEPlHgH-OufL/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 03 — PEMBELAJARAN MENDALAM
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-mendalam">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">🔎</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — Pembelajaran Mendalam dan Asesmen Dasar
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-mendalam')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/FILE_ID/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – Pembelajaran Mendalam dan Asesmen Dasar
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/FILE_ID/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 04 — PPL
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-ppl">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">🏫</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — PPL Terbimbing
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-ppl')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/FILE_ID/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – PPL Terbimbing
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/FILE_ID/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 05 — GROWTH MINDSET
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-growth">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">🌱</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — Pola Pikir Bertumbuh
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-growth')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/FILE_ID/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – Pola Pikir Bertumbuh
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/FILE_ID/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       MODAL 06 — PEMBELAJARAN KREATIF
+       ===================================================== -->
+
+  <div class="modal-overlay" id="modal-kreatif">
+
+    <div class="modal-box">
+
+      <div class="modal-header">
+
+        <div class="modal-icon">💡</div>
+
+        <div>
+          <div class="modal-type">
+            refleksi · semester 01
+          </div>
+
+          <div class="modal-title">
+            Refleksi — Pembelajaran Kreatif dan Inovatif
+          </div>
+        </div>
+
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-kreatif')">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="modal-body">
+
+        <iframe
+          src="https://drive.google.com/file/d/FILE_ID/preview"
+          width="100%"
+          height="700"
+          style="
+            border:1px solid var(--border2);
+            border-radius:8px;
+            background:var(--bg3);
+            margin-bottom:1rem;">
+        </iframe>
+
+
+        <div class="drive-preview">
+
+          <div class="drive-icon">📄</div>
+
+          <div class="drive-info">
+
+            <div class="drive-name">
+              LK 2 Refleksi – Pembelajaran Kreatif dan Inovatif
+            </div>
+
+            <div class="drive-meta">
+              Semester 1 • PDF
+            </div>
+
+          </div>
+
+          <a
+            href="https://drive.google.com/file/d/FILE_ID/view"
+            target="_blank"
+            class="btn-primary"
+            style="font-size:.75rem;padding:8px 16px;">
+            ↗ Buka di Drive
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+  <div><div class="footer-logo">refleksi mata kuliah sem 01 · ppg prajabatan 2026</div><div style="margin-top:4px;">Rahma Hayuning Astuti · Informatika · UNY</div></div>
+  <div class="footer-r"><span>built with ♥ &amp; caffeine</span><span style="color:var(--border2);">|</span><span>github pages</span></div>
+</footer>
+
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
